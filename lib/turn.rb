@@ -31,8 +31,6 @@ def turn(board)
   index = gets.to_i
   if (valid_move?(board, index))
     move(board, index)
-  else
-    turn(board)
   end
   turn(board)
 end
