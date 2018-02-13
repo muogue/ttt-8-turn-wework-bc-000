@@ -25,5 +25,12 @@ def move(board, index)
   board[index] = "X"
 end
 
-def turn() 
+def turn(board)
+  puts "Please enter 1-9:"
+  index = gets.to_i
+  if (valid_move?(board, index))
+    move(board, index)
+  else
+    puts "Please enter 1-9:"
+  end
 end
