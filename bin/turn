@@ -22,3 +22,17 @@ end
 def position_taken?(board, index)
   board[index] != " "
 end
+
+def move(board, index)
+  board[index] = "X"
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  index = gets.to_i
+  if (valid_move?(board, index))
+    move(board, index)
+  else
+    turn(board)
+  end
+end
