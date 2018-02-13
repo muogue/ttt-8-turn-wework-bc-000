@@ -27,13 +27,13 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
+  display_board(board)
   index = gets.to_i
   if (valid_move?(board, index))
     move(board, index)
   else
     turn(board)
   end
-  display_board(board)
   turn(board)
 end
 
